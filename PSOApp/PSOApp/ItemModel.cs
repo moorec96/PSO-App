@@ -8,5 +8,10 @@ namespace PSOApp
         public float DropRate { get; set; }
         public string SectionID { get; set; }
         public string Difficulty { get; set; }
+
+        public override string ToString()
+        {
+            return Item_Name;
+        }
     }
 }

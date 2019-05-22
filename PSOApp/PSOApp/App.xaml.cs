@@ -6,17 +6,18 @@ namespace PSOApp
 {
     public partial class App : Application
     {
+
+        public static DatabaseManager dm;
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            dm = new DatabaseManager();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
-            DatabaseManager dm = new DatabaseManager();
         }
 
         protected override void OnSleep()

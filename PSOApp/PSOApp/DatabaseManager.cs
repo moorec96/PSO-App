@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using SQLite.Net;
+using SQLite;
 using Xamarin.Forms;
 
 namespace PSOApp
@@ -16,7 +16,7 @@ namespace PSOApp
 
         public List<ItemModel> GetAllItems()
         {
-            return dbConnection.Query<ItemModel>("Select * From [Employee]");
+            return dbConnection.Query<ItemModel>("Select * From Drops");
         }
 
         public int SaveEmployee(ItemModel aItem)
